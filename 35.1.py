@@ -1,0 +1,28 @@
+class User:
+    __name = None
+    __surname = None
+
+    def setName(self, name):
+        self.__name = name
+
+    def getName(self):
+        return self.__name
+
+    def setSurn(self, surname):
+        self.__surname = surname
+
+    def getSurn(self):
+        return self.__surname
+
+
+class Employee(User):
+    def getFull(self):
+        return self.__name + ' ' + self.__surname
+
+
+employee = Employee()
+employee.setName('John')
+employee.setSurn('Doe')
+
+full_name = employee.getFull()
+print(full_name)
